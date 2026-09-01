@@ -24,12 +24,20 @@ const listings = [
 ];
 const productGrid = document.querySelector('#product-grid');
 const filters = document.querySelectorAll('.filter');
+const listingSort = document.querySelector('#listing-sort');
 const labels = { depop: 'View on Depop', grailed: 'View on Grailed' };
 let activeFilter = 'all';
+let activeSort = 'most-viewed';
 let visibleLimit = 12;
 
 function filteredListings() {
-  return activeFilter === 'all' ? listings : listings.filter((listing) => listing.platform === activeFilter);
+  const filtered = activeFilter === 'all' ? [...listings] : listings.filter((listing) => listing.platform === activeFilter);
+  const priceValue = (listing) => Number.parseFloat(listing.price.replace(/[^0-9.]/g, '')) || 0;
+
+  if (activeSort === 'price-low') return filtered.sort((a, b) => priceValue(a) - priceValue(b));
+  if (activeSort === 'price-high') return filtered.sort((a, b) => priceValue(b) - priceValue(a));
+
+  return filtered;
 }
 
 function renderListings() {
@@ -54,6 +62,11 @@ if (productGrid) {
     visibleLimit = 12;
     renderListings();
   }));
+  listingSort?.addEventListener('change', () => {
+    activeSort = listingSort.value;
+    visibleLimit = 12;
+    renderListings();
+  });
   document.querySelector('#load-more').addEventListener('click', () => {
     visibleLimit += 12;
     renderListings();
