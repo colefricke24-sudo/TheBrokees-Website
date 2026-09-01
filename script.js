@@ -27,7 +27,7 @@ const filters = document.querySelectorAll('.filter');
 const listingSort = document.querySelector('#listing-sort');
 const labels = { depop: 'View on Depop', grailed: 'View on Grailed' };
 let activeFilter = 'all';
-let activeSort = 'most-viewed';
+let activeSort = 'price-high';
 let visibleLimit = 12;
 
 function filteredListings() {
