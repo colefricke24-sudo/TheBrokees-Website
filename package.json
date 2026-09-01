@@ -1,0 +1,14 @@
+{
+  "name": "thebrokees-storefront",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-build.mjs"
+  },
+  "devDependencies": {
+    "@openai/sites-vite-plugin": "latest",
+    "vite": "latest"
+  }
+}
