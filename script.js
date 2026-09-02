@@ -7,18 +7,18 @@ const listings = [
   { platform: 'grailed', title: 'Prada Carbon cologne', detail: 'Prada / One size', price: '$65', image: 'https://media-assets.grailed.com/prd/listing/temp/110dd308ca2547509b76f7f3eade56bc?w=500', url: 'https://www.grailed.com/listings/104303851-prada-prada-carbon-cologne' },
   { platform: 'depop', title: '2003 Spirit Invitational tee', detail: 'Vintage Gildan', price: '$13.30', image: 'https://media-photos.depop.com/b1/42954975/4378106298_829e915e6b824bf39cbf4254e26360ed/P0.jpg', url: 'https://www.depop.com/products/theb7okees-2003-gildan-spirit-invitational-cotton-854e/' },
   { platform: 'depop', title: 'Dale Earnhardt Sr. red tee', detail: 'Vintage NASCAR', price: '$21.70', image: 'https://media-photos.depop.com/b1/42954975/4346703235_6c9a8a3ce3634fb8a35a60d037468792/P0.jpg', url: 'https://www.depop.com/products/thebroaees-nascar-dale-earnhardt-sr-red-1d9e/' },
-  { platform: 'depop', title: 'Harley-Davidson Café tee', detail: 'Vintage graphic', price: '$22.75', image: 'https://media-photos.depop.com/b1/42954975/4000268073_2cdb559a639244338dbfe071cfe8db14/P0.jpg', url: 'https://www.depop.com/products/theb9okees-vintage-harley-davidson-cafe-tee-f2be/' },
+  { platform: 'depop', title: 'Harley-Davidson Café tee', detail: 'Vintage graphic', price: '$22.75', originalPrice: '$30.10', image: 'https://media-photos.depop.com/b1/42954975/4000268073_2cdb559a639244338dbfe071cfe8db14/P0.jpg', url: 'https://www.depop.com/products/theb9okees-vintage-harley-davidson-cafe-tee-f2be/' },
   { platform: 'depop', title: 'Black NASCAR tee', detail: 'Vintage racing', price: '$26.95', image: 'https://media-photos.depop.com/b1/42954975/4255477563_ebf282cbb87a4444a449ba6e39f4ed12/P0.jpg', url: 'https://www.depop.com/products/thebrokzes-mens-black-nascar-tee-shirt-9fbd/' },
   { platform: 'depop', title: 'Weekends purple sweater', detail: 'Vintage / Size L', price: '$26.95', image: 'https://media-photos.depop.com/b1/42954975/4255464771_cb77a3dc5f7c4c95a64c3fb1604a83a6/P0.jpg', url: 'https://www.depop.com/products/thebrokeis-vintage-weekends-purple-sweater-great-06b9/' },
-  { platform: 'depop', title: 'The North Face HyVent jacket', detail: 'Black rain jacket', price: '$53.20', image: 'https://media-photos.depop.com/b1/42954975/4255437504_dc1d328acb84424fbf8532797a94e79b/P0.jpg', url: 'https://www.depop.com/products/thebrokeef-the-north-face-hyvent-black-45a9/' },
+  { platform: 'depop', title: 'The North Face HyVent jacket', detail: 'Black rain jacket', price: '$40.08', originalPrice: '$53.20', image: 'https://media-photos.depop.com/b1/42954975/4255437504_dc1d328acb84424fbf8532797a94e79b/P0.jpg', url: 'https://www.depop.com/products/thebrokeef-the-north-face-hyvent-black-45a9/' },
   { platform: 'depop', title: 'Dale Earnhardt racing tee', detail: 'Vintage NASCAR', price: '$32.20', image: 'https://media-photos.depop.com/r1/42954975/4231424682_eb39378e1b8d4921b377b4d954c0fe9a/P0.jpg', url: 'https://www.depop.com/products/thesrokees-nascar-dale-earnhardt-sr-red-fb9a/' },
   { platform: 'depop', title: 'Vintage NASCAR tee', detail: 'Racing graphic', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4194645288_b6b984a28f464e6a8a93eba307b30178/P0.jpg', url: 'https://www.depop.com/products/tgebrokees-vintage-nascar-tee-on-a-ec1f/' },
   { platform: 'depop', title: 'Red NASCAR racing tee', detail: 'Vintage graphic', price: '$5.95', image: 'https://media-photos.depop.com/b1/42954975/4194678514_a8c54dc85c5c46368158b0c80ef3800f/P0.jpg', url: 'https://www.depop.com/products/the9rokees-red-nascar-racing-tee-with-d8f3/' },
   { platform: 'depop', title: 'Chase Authentics NASCAR tee', detail: 'Vintage racing', price: '$26.95', image: 'https://media-photos.depop.com/b1/42954975/4194629957_28f38e27f4f44f7f9b8be00f81a313a4/P0.jpg', url: 'https://www.depop.com/products/thebrokeej-vintage-chase-authentics-nascar-tee-6382/' },
   { platform: 'depop', title: 'Route 66 jorts', detail: 'Size 34', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4194607698_1c02db24abd3490799efb8d4e571cf49/P0.jpg', url: 'https://www.depop.com/products/thelrokees-rout-66-jorts-size-34-74a9/' },
-  { platform: 'depop', title: 'Grateful Dead Terrapin AOP', detail: 'Liquid Blue / Vintage', price: '$89.95', image: 'https://media-photos.depop.com/b1/42954975/3943101883_6e17151a3aee418484aa2884b9ff688a/P0.jpg', url: 'https://www.depop.com/products/thebrokeqs-liquid-blue-grateful-dead-terrapin-b0d3/' },
-  { platform: 'grailed', title: '1996 Olympics polo', detail: 'Hanes Vintage / Size L', price: '$36', image: 'https://media-assets.grailed.com/prd/listing/temp/66c225f18ab648c28b9a82d31c77c627?w=500', url: 'https://www.grailed.com/listings/79315113-hanes-x-vintage-1996-olympics-polo' },
-  { platform: 'grailed', title: 'G-Star Raw crewneck', detail: 'G-Star / Size M', price: '$48', image: 'https://media-assets.grailed.com/prd/listing/temp/7030f01c6f2c4b1e87b62c5c8131ad39?w=500', url: 'https://www.grailed.com/listings/101476569-g-star-g-star-raw-crew-neck-sweatshirt' }
+  { platform: 'depop', title: 'Grateful Dead Terrapin AOP', detail: 'Liquid Blue / Vintage', price: '$89.95', originalPrice: '$105.70', image: 'https://media-photos.depop.com/b1/42954975/3943101883_6e17151a3aee418484aa2884b9ff688a/P0.jpg', url: 'https://www.depop.com/products/thebrokeqs-liquid-blue-grateful-dead-terrapin-b0d3/' },
+  { platform: 'grailed', title: '1996 Olympics polo', detail: 'Hanes Vintage / Size L', price: '$36', originalPrice: '$50', image: 'https://media-assets.grailed.com/prd/listing/temp/66c225f18ab648c28b9a82d31c77c627?w=500', url: 'https://www.grailed.com/listings/79315113-hanes-x-vintage-1996-olympics-polo' },
+  { platform: 'grailed', title: 'G-Star Raw crewneck', detail: 'G-Star / Size M', price: '$48', originalPrice: '$80', image: 'https://media-assets.grailed.com/prd/listing/temp/7030f01c6f2c4b1e87b62c5c8131ad39?w=500', url: 'https://www.grailed.com/listings/101476569-g-star-g-star-raw-crew-neck-sweatshirt' }
 ];
 const productGrid = document.querySelector('#product-grid');
 const filters = document.querySelectorAll('.filter');
@@ -74,9 +74,18 @@ function renderListings() {
     const detail = document.createElement('p');
     detail.textContent = listing.detail;
     copy.append(title, detail);
+    const priceGroup = document.createElement('div');
+    priceGroup.className = 'price-group';
     const price = document.createElement('strong');
     price.textContent = listing.price;
-    info.append(copy, price);
+    priceGroup.append(price);
+    if (listing.originalPrice) {
+      const originalPrice = document.createElement('s');
+      originalPrice.className = 'original-price';
+      originalPrice.textContent = listing.originalPrice;
+      priceGroup.append(originalPrice);
+    }
+    info.append(copy, priceGroup);
     card.append(imageWrap, info);
     fragment.append(card);
   });
