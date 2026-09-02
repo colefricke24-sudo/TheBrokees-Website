@@ -44,11 +44,54 @@ function renderListings() {
   if (!productGrid) return;
   const filtered = filteredListings();
   const visible = filtered.slice(0, visibleLimit);
-  productGrid.innerHTML = visible.map((listing, index) => `<a class="product-card ${listing.platform}" href="${listing.url}" target="_blank" rel="noreferrer" aria-label="${labels[listing.platform]}: ${listing.title}"><div class="product-image"><img src="${listing.image}" alt="${listing.title}" loading="${index > 3 ? 'lazy' : 'eager'}" /><span class="platform-tag">${listing.platform}</span><span class="open-listing">${labels[listing.platform]} ↗</span></div><div class="product-info"><div><h3>${listing.title}</h3><p>${listing.detail}</p></div><strong>${listing.price}</strong></div></a>`).join('');
+  const fragment = document.createDocumentFragment();
+  visible.forEach((listing, index) => {
+    const card = document.createElement('a');
+    card.className = `product-card ${listing.platform}`;
+    card.href = listing.url;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.setAttribute('aria-label', `${labels[listing.platform]}: ${listing.title}`);
+
+    const imageWrap = document.createElement('div');
+    imageWrap.className = 'product-image';
+    const image = document.createElement('img');
+    image.src = listing.image;
+    image.alt = listing.title;
+    image.loading = index > 3 ? 'lazy' : 'eager';
+    image.decoding = 'async';
+    const platform = document.createElement('span');
+    platform.className = 'platform-tag';
+    platform.textContent = listing.platform;
+    const openLabel = document.createElement('span');
+    openLabel.className = 'open-listing';
+    openLabel.textContent = `${labels[listing.platform]} ↗`;
+    imageWrap.append(image, platform, openLabel);
+
+    const info = document.createElement('div');
+    info.className = 'product-info';
+    const copy = document.createElement('div');
+    const title = document.createElement('h3');
+    title.textContent = listing.title;
+    const detail = document.createElement('p');
+    detail.textContent = listing.detail;
+    copy.append(title, detail);
+    const price = document.createElement('strong');
+    price.textContent = listing.price;
+    info.append(copy, price);
+    card.append(imageWrap, info);
+    fragment.append(card);
+  });
+  productGrid.replaceChildren(fragment);
   const loadMore = document.querySelector('#load-more');
   if (loadMore) {
     loadMore.hidden = visible.length >= filtered.length;
-    loadMore.innerHTML = `Load more finds <small>${visible.length} / ${filtered.length}</small> <span>↓</span>`;
+    loadMore.replaceChildren(document.createTextNode('Load more finds '));
+    const count = document.createElement('small');
+    count.textContent = `${visible.length} / ${filtered.length}`;
+    const arrow = document.createElement('span');
+    arrow.textContent = '↓';
+    loadMore.append(count, document.createTextNode(' '), arrow);
   }
 }
 
@@ -57,7 +100,11 @@ if (productGrid) {
   document.querySelector('#depop-count').textContent = `(${listings.filter((item) => item.platform === 'depop').length})`;
   document.querySelector('#grailed-count').textContent = `(${listings.filter((item) => item.platform === 'grailed').length})`;
   filters.forEach((button) => button.addEventListener('click', () => {
-    filters.forEach((filter) => filter.classList.toggle('active', filter === button));
+    filters.forEach((filter) => {
+      const isActive = filter === button;
+      filter.classList.toggle('active', isActive);
+      filter.setAttribute('aria-pressed', String(isActive));
+    });
     activeFilter = button.dataset.filter;
     visibleLimit = 12;
     renderListings();
@@ -85,4 +132,11 @@ if (menuToggle && nav) {
     nav.classList.remove('open');
     menuToggle.setAttribute('aria-expanded', 'false');
   }));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    }
+  });
 }
