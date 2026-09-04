@@ -17,16 +17,18 @@
 
 /* Brand system */
 .wordmark{display:flex;align-items:center;gap:10px}
-.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:#000 url("assets/thebrokees-tb-monogram.png") center/78% auto no-repeat;border:1px solid var(--ink)}
+.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:transparent url("assets/thebrokees-tb-monogram.png") center/78% auto no-repeat;filter:brightness(0)}
+.mobile-menu-monogram{display:none}
 .brand-break{min-height:230px;background:var(--acid);border-bottom:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:34px 4.6vw;gap:40px;overflow:hidden}
 .brand-lockup{display:block;width:min(560px,58vw);height:150px;background:#000;overflow:hidden;border:1px solid var(--ink);transform:rotate(-1.5deg);box-shadow:8px 8px 0 var(--ink)}
 .brand-lockup img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%}
 .brand-break>p{font:900 clamp(23px,3vw,45px)/.92 "Archivo Black",sans-serif;letter-spacing:-.06em;text-align:right;margin:0}
-.story-monogram{float:right;width:82px;height:82px;margin:-4px 0 22px 28px;transform:rotate(5deg);box-shadow:5px 5px 0 var(--orange)}
+.story-monogram{float:right;width:82px;height:82px;margin:-4px 0 22px 28px;transform:rotate(5deg)}
 footer .footer-logo.brand-lockup{width:min(440px,43vw);height:112px;margin:-18px 0 -10px;transform:rotate(-1deg);box-shadow:6px 6px 0 var(--ink)}
 
 @media(max-width:620px){
   .wordmark{gap:7px}.wordmark>.brand-monogram{width:34px;height:34px;flex-basis:34px}
+  .main-nav.open .mobile-menu-monogram{display:block;width:32px;height:32px;flex:0 0 32px;margin-top:8px;transform:rotate(-4deg);background-color:#000;filter:none}
   .brand-break{min-height:0;padding:45px 20px 50px;display:block}
   .brand-lockup{width:100%;height:112px;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--ink)}
   .brand-break>p{font-size:28px;text-align:left;margin-top:34px}
