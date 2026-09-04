@@ -17,7 +17,7 @@
 
 /* Brand system */
 .wordmark{display:flex;align-items:center;gap:10px}
-.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:transparent url("assets/thebrokees-tb-monogram.png") center/78% auto no-repeat;filter:brightness(0)}
+.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:#000 url("assets/thebrokees-tb-monogram.png") center/cover no-repeat}
 .mobile-menu-monogram{display:none}
 .brand-break{min-height:230px;background:var(--acid);border-bottom:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:34px 4.6vw;gap:40px;overflow:hidden}
 .brand-lockup{display:block;width:min(560px,58vw);height:150px;background:#000;overflow:hidden;border:1px solid var(--ink);transform:rotate(-1.5deg);box-shadow:8px 8px 0 var(--ink)}
