@@ -17,21 +17,19 @@
 
 /* Brand system */
 .wordmark{display:flex;align-items:center;gap:10px}
-.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:#000 url("assets/thebrokees-logo.png") center -79px/250px auto no-repeat;border:1px solid var(--ink)}
-.hero-monogram{position:absolute;z-index:4;right:4%;top:4%;width:70px;height:70px;background-position:center -130px;background-size:410px auto;border-color:var(--paper);transform:rotate(6deg);box-shadow:4px 4px 0 var(--ink)}
+.brand-monogram{display:block;width:42px;height:42px;flex:0 0 42px;background:#000 url("assets/thebrokees-tb-monogram.png") center/78% auto no-repeat;border:1px solid var(--ink)}
 .brand-break{min-height:230px;background:var(--acid);border-bottom:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:34px 4.6vw;gap:40px;overflow:hidden}
 .brand-lockup{display:block;width:min(560px,58vw);height:150px;background:#000;overflow:hidden;border:1px solid var(--ink);transform:rotate(-1.5deg);box-shadow:8px 8px 0 var(--ink)}
 .brand-lockup img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%}
 .brand-break>p{font:900 clamp(23px,3vw,45px)/.92 "Archivo Black",sans-serif;letter-spacing:-.06em;text-align:right;margin:0}
-.story-monogram{float:right;width:82px;height:82px;background-position:center -153px;background-size:480px auto;margin:-4px 0 22px 28px;transform:rotate(5deg);box-shadow:5px 5px 0 var(--orange)}
+.story-monogram{float:right;width:82px;height:82px;margin:-4px 0 22px 28px;transform:rotate(5deg);box-shadow:5px 5px 0 var(--orange)}
 footer .footer-logo.brand-lockup{width:min(440px,43vw);height:112px;margin:-18px 0 -10px;transform:rotate(-1deg);box-shadow:6px 6px 0 var(--ink)}
 
 @media(max-width:620px){
-  .wordmark{gap:7px}.wordmark>.brand-monogram{width:34px;height:34px;flex-basis:34px;background-position:center -63px;background-size:200px auto}
-  .hero-monogram{width:54px;height:54px;background-position:center -100px;background-size:320px auto;right:5%;top:3%}
+  .wordmark{gap:7px}.wordmark>.brand-monogram{width:34px;height:34px;flex-basis:34px}
   .brand-break{min-height:0;padding:45px 20px 50px;display:block}
   .brand-lockup{width:100%;height:112px;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--ink)}
   .brand-break>p{font-size:28px;text-align:left;margin-top:34px}
-  .story-monogram{width:64px;height:64px;background-position:center -119px;background-size:375px auto;margin-left:18px}
+  .story-monogram{width:64px;height:64px;margin-left:18px}
   footer .footer-logo.brand-lockup{grid-column:1/-1;width:100%;height:100px;margin:-10px 0 0}
 }
