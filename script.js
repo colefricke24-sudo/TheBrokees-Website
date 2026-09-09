@@ -1,16 +1,16 @@
 const listings = [
+  { platform: 'depop', title: 'Harley-Davidson pinup tee', detail: 'Grey and brown cotton graphic tee', size: 'XL', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4654114347_84647e1000b64270aa0ee54367e4dcad/P10.jpg', url: 'https://www.depop.com/products/tiebrokees-harley-davidson-pinup-girl-cotton-5cda/' },
   { platform: 'depop', title: 'H&M Super Baggy Jeans', detail: 'Blue wash denim', size: '33"', price: '$21.70', image: 'https://media-photos.depop.com/b1/42954975/4646567420_7e104696e4f94b02ab0ea1ecdbdd82e4/P0.jpg', url: 'https://www.depop.com/products/thebrozees-hm-super-baggy-jeans-blue-8c6a/' },
   { platform: 'depop', title: 'Hype Dept. Lost Archive tee', detail: 'White graphic tee', size: 'M', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4646558772_a859b54b5e8b409bb4583adcd56413dd/P0.jpg', url: 'https://www.depop.com/products/thebro2ees-hype-dept-lost-archive-white-56e9/' },
   { platform: 'depop', title: 'Hollister cropped jersey', detail: 'Cream and blue jersey', size: 'XL', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4646501243_b5d5b17b7ea646a58c449dc454606f01/P0.jpg', url: 'https://www.depop.com/products/thebfokees-hollister-co-cream-blue-3819/' },
-  { platform: 'grailed', title: 'Essentials light oatmeal hoodie', detail: 'Fear of God Essentials / Brand new', size: 'XS', price: '$72', originalPrice: '$80', image: 'https://media-assets.grailed.com/prd/listing/temp/07e853305bf149b38266500eb4592b76?w=500', url: 'https://www.grailed.com/listings/105175764-fear-of-god-essentials-hoodie-light-oatmeal' },
   { platform: 'grailed', title: 'Essentials black shorts', detail: 'Fear of God Essentials / Brand new', size: '32', price: '$65', image: 'https://media-assets.grailed.com/prd/listing/temp/036d3cd91de74fafb03c4f9784e0c93e?w=500', url: 'https://www.grailed.com/listings/105176512-fear-of-god-essentials-shorts-black' },
+  { platform: 'grailed', title: 'Essentials light oatmeal hoodie', detail: 'Fear of God Essentials / Brand new', size: 'XS', price: '$72', originalPrice: '$80', image: 'https://media-assets.grailed.com/prd/listing/temp/07e853305bf149b38266500eb4592b76?w=500', url: 'https://www.grailed.com/listings/105175764-fear-of-god-essentials-hoodie-light-oatmeal' },
   { platform: 'grailed', title: 'GV Gallery Robert Garcia tee', detail: 'The GV Gallery / Brand new', size: 'S', price: '$99', originalPrice: '$110', image: 'https://media-assets.grailed.com/prd/listing/temp/9d6b5a9de8034a2aa896659cc4ed747a?w=500', url: 'https://www.grailed.com/listings/104882849-the-gv-gallery-gv-gallery-robert-garcia-tee-size-small' },
+  { platform: 'grailed', title: 'Prada Carbon cologne', detail: 'Prada', size: 'OS', price: '$65', image: 'https://media-assets.grailed.com/prd/listing/temp/110dd308ca2547509b76f7f3eade56bc?w=500', url: 'https://www.grailed.com/listings/104303851-prada-prada-carbon-cologne' },
   { platform: 'depop', title: 'Charleston Cougars crewneck', detail: 'Vintage sweatshirt', size: 'S', price: '$8.05', image: 'https://media-photos.depop.com/b1/42954975/4542258067_2806887b32f3432d88aedc18048e014c/P0.jpg', url: 'https://www.depop.com/products/t3ebrokees-charleston-cougars-crewneck-sweatshirt-with-5752/' },
   { platform: 'depop', title: 'Bud King of Beers tee', detail: 'Vintage graphic', size: 'XL', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4526669100_5efff66df0d441418065370280e576d4/P0.jpg', url: 'https://www.depop.com/products/thebrodees-bud-king-of-beers-blue-9230/' },
   { platform: 'grailed', title: 'Purple Brand glitch tee', detail: 'Purple Brand / Brand new', size: 'L', price: '$51', originalPrice: '$120', image: 'https://media-assets.grailed.com/prd/listing/temp/c3b156f666394791b09f5269a74c440d?w=500', imageRotation: 90, url: 'https://www.grailed.com/listings/102201037-purple-brand-purple-brand-glitch-tee' },
   { platform: 'depop', title: 'Rare Market hoodie', detail: 'Market / Hoodie', size: 'M', price: '$42.70', image: 'https://media-photos.depop.com/r1/42954975/4317700855_33c3e7b6728149f1b95a4733882689b6/P0.jpg', url: 'https://www.depop.com/products/thebrokees-rare-market-hoodie-size-medium-a840/' },
-  { platform: 'depop', title: 'Harley-Davidson pinup tee', detail: 'Grey and brown cotton graphic tee', size: 'XL', price: '$16.45', image: 'https://media-photos.depop.com/b1/42954975/4654114347_84647e1000b64270aa0ee54367e4dcad/P10.jpg', url: 'https://www.depop.com/products/tiebrokees-harley-davidson-pinup-girl-cotton-5cda/' },
-  { platform: 'grailed', title: 'Prada Carbon cologne', detail: 'Prada', size: 'OS', price: '$65', image: 'https://media-assets.grailed.com/prd/listing/temp/110dd308ca2547509b76f7f3eade56bc?w=500', url: 'https://www.grailed.com/listings/104303851-prada-prada-carbon-cologne' },
   { platform: 'depop', title: '2003 Spirit Invitational tee', detail: 'Vintage Gildan', size: 'M', price: '$13.30', image: 'https://media-photos.depop.com/b1/42954975/4378106298_829e915e6b824bf39cbf4254e26360ed/P0.jpg', url: 'https://www.depop.com/products/theb7okees-2003-gildan-spirit-invitational-cotton-854e/' },
   { platform: 'depop', title: 'Dale Earnhardt Sr. red tee', detail: 'Vintage NASCAR', size: 'XL', price: '$21.70', image: 'https://media-photos.depop.com/b1/42954975/4346703235_6c9a8a3ce3634fb8a35a60d037468792/P0.jpg', url: 'https://www.depop.com/products/thebroaees-nascar-dale-earnhardt-sr-red-1d9e/' },
   { platform: 'depop', title: 'Harley-Davidson Café tee', detail: 'Vintage graphic', size: 'L', price: '$22.75', originalPrice: '$30.10', image: 'https://media-photos.depop.com/b1/42954975/4000268073_2cdb559a639244338dbfe071cfe8db14/P0.jpg', url: 'https://www.depop.com/products/theb9okees-vintage-harley-davidson-cafe-tee-f2be/' },
@@ -33,7 +33,7 @@ const listingSort = document.querySelector('#listing-sort');
 const labels = { depop: 'View on Depop', grailed: 'View on Grailed' };
 let activeFilter = 'all';
 let activeSize = 'all';
-let activeSort = 'price-high';
+let activeSort = 'newest';
 let visibleLimit = 12;
 
 function filteredListings() {
@@ -44,6 +44,7 @@ function filteredListings() {
   });
   const priceValue = (listing) => Number.parseFloat(listing.price.replace(/[^0-9.]/g, '')) || 0;
 
+  if (activeSort === 'newest') return filtered;
   if (activeSort === 'price-low') return filtered.sort((a, b) => priceValue(a) - priceValue(b));
   if (activeSort === 'price-high') return filtered.sort((a, b) => priceValue(b) - priceValue(a));
 
