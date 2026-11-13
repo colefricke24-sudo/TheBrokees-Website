@@ -19,7 +19,6 @@ const listings = [
   { platform: 'grailed', title: 'Vintage NASCAR trophy tee', detail: 'Winners Circle / Vintage racing', size: 'XL', price: '$18', originalPrice: '$25', image: 'https://media-assets.grailed.com/prd/listing/temp/e0d1d6bc962e42f18d52709f3472e2b1?w=500', url: 'https://www.grailed.com/listings/101476828-winners-circle-vintage-nascar-tee-shirt-xl' },
   { platform: 'grailed', title: 'Vintage NASCAR pit-crew tee', detail: 'Winners Circle / Vintage racing', size: 'XL', price: '$14', originalPrice: '$25', image: 'https://media-assets.grailed.com/prd/listing/temp/5971be7a8ea34c8d9ac61499c7881ae3?w=500', url: 'https://www.grailed.com/listings/101476733-winners-circle-vintage-nascar-tee' },
   { platform: 'depop', title: 'Chase Authentics NASCAR tee', detail: 'Vintage racing', size: 'L', price: '$26.95', image: 'https://media-photos.depop.com/b1/42954975/4194629957_28f38e27f4f44f7f9b8be00f81a313a4/P0.jpg', url: 'https://www.depop.com/products/thebrokeej-vintage-chase-authentics-nascar-tee-6382/' },
-  { platform: 'grailed', title: 'G-Star Raw crewneck', detail: 'G-Star', size: 'M', price: '$48', originalPrice: '$80', image: 'https://media-assets.grailed.com/prd/listing/temp/7030f01c6f2c4b1e87b62c5c8131ad39?w=500', url: 'https://www.grailed.com/listings/101476569-g-star-g-star-raw-crew-neck-sweatshirt' }
 ];
 const productGrid = document.querySelector('#product-grid');
 const filters = document.querySelectorAll('.filter');
